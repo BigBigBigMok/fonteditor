@@ -109,6 +109,7 @@ npm run demo
 
 
 ### 导出语句
+```js
 var stop=0;
 var time=500;
 $("#glyf-list .glyf-item").each(function(e,i){
@@ -125,4 +126,4 @@ $("#glyf-list .glyf-item").each(function(e,i){
 		time=time+500;
 	}
 });
-
+```
