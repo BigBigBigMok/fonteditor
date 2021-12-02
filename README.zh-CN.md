@@ -105,3 +105,24 @@ npm run demo
 28. 2019-10-14 使用es6 module 进行重构.
 
 29. 2019-10-24 支持woff2读取和写入, 发布Ver2.
+
+
+
+### 导出语句
+var stop=0;
+var time=500;
+$("#glyf-list .glyf-item").each(function(e,i){
+	if(stop==0){
+		setTimeout('console.log("Start",'+e+')',time); 
+		setTimeout('$("#glyf-list .glyf-item:nth-child('+e+')").click();console.log("选中",'+e+');',time); 
+		time=time+500;
+		setTimeout('$("#glyf-list-commandmenu > li:nth-child(11)").click();console.log("点击导出",'+e+')',time); 
+		time=time+500;
+		setTimeout('$("#glyf-download-svg").click();console.log("点击下载SVG",'+e+')',time); 
+		time=time+1000;
+		setTimeout('$("#model-dialog > div > div > div.modal-header > button > span:nth-child(1)").click();console.log("关闭弹框",'+e+')',time); 
+		setTimeout('console.log("End",'+e+')',time); 
+		time=time+500;
+	}
+});
+
